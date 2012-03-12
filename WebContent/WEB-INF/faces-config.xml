@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>Login</from-outcome>
+			<to-view-id>/login.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Acceuil</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Subscribe</from-outcome>
+			<to-view-id>/inscription.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Home</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/inscription.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Home</from-outcome>
+			<to-view-id>/inscription.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<application>
+		<locale-config>
+			<default-locale>fr</default-locale>
+			<supported-locale>en</supported-locale>
+		</locale-config>
+	</application>
+	<managed-bean>
+		<managed-bean-name>localeLang</managed-bean-name>
+		<managed-bean-class>org.ubo.controller.LocaleConfig</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>user</managed-bean-name>
+		<managed-bean-class>org.ubo.model.User</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+
+	</managed-bean>
+
+
+	<managed-bean>
+		<managed-bean-name>login</managed-bean-name>
+		<managed-bean-class>org.ubo.controller.Login</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>inscription</managed-bean-name>
+		<managed-bean-class>org.ubo.controller.Inscription</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+
+	</managed-bean>
+</faces-config>

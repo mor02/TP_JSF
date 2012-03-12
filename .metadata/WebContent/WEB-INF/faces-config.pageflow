@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13311265458240" configfile="/jsf/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login" id="pf13311414366264" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf133116129088524" inlinks="pf133116143958431" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="index" id="pf133116117768721" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf133116129088524 pf133116157811736" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf133116143958432" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf133116143958431 pf133116157811736 pf13314100352650" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="inscription" id="pf13314100352651" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" outlinks="pf13314160179424" inlinks="pf13314100352650 pf13314160179424" path="/inscription.jsp"/>
+  <links id="pf133116129088524" target="pf133116117768721" source="pf13311414366264" outcome="Home"/>
+  <links id="pf133116143958431" target="pf13311414366264" source="pf133116143958432" outcome="Login"/>
+  <links id="pf133116157811736" target="pf133116117768721" source="pf133116143958432" outcome="Acceuil"/>
+  <links id="pf13314100352650" target="pf13314100352651" source="pf133116143958432" outcome="Subscribe"/>
+  <links id="pf13314160179424" target="pf13314100352651" source="pf13314100352651" outcome="Home"/>
+</pageflow:Pageflow>
